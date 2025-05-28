@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký Tuyển dụng</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Form Đăng ký Tuyển dụng</h1>
+    <form id="applyForm" action="save.php" method="POST">
+      <label>Khu vực:</label>
+      <input type="text" name="khu_vuc" placeholder="Nhập khu vực" required />
+      
+      <label>Số điện thoại:</label>
+      <input type="tel" name="so_dien_thoai" placeholder="Nhập số điện thoại" required />
+      
+      <label>Họ tên:</label>
+      <input type="text" name="ho_ten" placeholder="Nhập họ tên" required />
+      
+      <label>Năm sinh:</label>
+      <input type="number" name="nam_sinh" placeholder="Nhập năm sinh" min="1900" max="2025" required />
+      
+      <label>Giới tính:</label>
+      <select name="gioi_tinh" required>
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+      </select>
+      
+      <button type="submit">Gửi Đăng ký</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách Ứng viên</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Danh sách Ứng viên</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Khu vực</th>
+          <th>SĐT</th>
+          <th>Họ tên</th>
+          <th>Năm sinh</th>
+          <th>Giới tính</th>
+          <th>Ngày đăng ký</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        include 'config.php';
+        $sql = \"SELECT * FROM ung_vien ORDER BY ngay_dang_ky DESC\";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            echo \"<tr><td>{$row['id']}</td><td>{$row['khu_vuc']}</td><td>{$row['so_dien_thoai']}</td><td>{$row['ho_ten']}</td><td>{$row['nam_sinh']}</td><td>{$row['gioi_tinh']}</td><td>{$row['ngay_dang_ky']}</td></tr>\";
+          }
+        } else {
+          echo \"<tr><td colspan='7'>Chưa có dữ liệu</td></tr>\";
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

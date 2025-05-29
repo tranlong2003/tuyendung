@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Đăng ký Tuyển dụng</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Form Tuyển dụng</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Form Đăng ký Tuyển dụng</h1>
-    <form id="applyForm" action="save.php" method="POST">
-      <label>Khu vực:</label>
-      <input type="text" name="khu_vuc" placeholder="Nhập khu vực" required />
-      
-      <label>Số điện thoại:</label>
-      <input type="tel" name="so_dien_thoai" placeholder="Nhập số điện thoại" required />
-      
-      <label>Họ tên:</label>
-      <input type="text" name="ho_ten" placeholder="Nhập họ tên" required />
-      
-      <label>Năm sinh:</label>
-      <input type="number" name="nam_sinh" placeholder="Nhập năm sinh" min="1900" max="2025" required />
-      
-      <label>Giới tính:</label>
-      <select name="gioi_tinh" required>
-        <option value="Nam">Nam</option>
-        <option value="Nữ">Nữ</option>
-      </select>
-      
-      <button type="submit">Gửi Đăng ký</button>
-    </form>
+
+<header>
+  <h1>NK Nhân Kiệt</h1>
+  <div class="buttons">
+    <button class="btn-outline-green">Người tìm việc đăng nhập/đăng ký</button>
+    <button class="btn-black">Nhà Tuyển Dụng</button>
   </div>
-  <script src="script.js"></script>
+</header>
+
+<div class="main">
+  <!-- Cột trái -->
+  <div class="column">
+    <h3 class="highlight">Dịch vụ đăng tin tuyển dụng</h3>
+    <ul>
+      <li>Miễn phí và không giới hạn số lượng</li>
+      <li>Dễ dàng, nhanh chóng</li>
+      <li>Tiếp cận CV ứng viên khổng lồ</li>
+      <li>Kiểm duyệt trong 24h</li>
+    </ul>
+  </div>
+
+  <!-- Cột giữa: Form -->
+  <div class="column form-box">
+    <h3>Form Đăng ký</h3>
+    <input type="text" placeholder="Khu vực bạn muốn làm việc">
+    <input type="text" placeholder="Số điện thoại">
+    <input type="text" placeholder="Họ và tên">
+    <input type="text" placeholder="Năm sinh">
+    <div class="radio-group">
+      <label><input type="radio" name="gender" checked> Nam</label>
+      <label><input type="radio" name="gender"> Nữ</label>
+    </div>
+    <button class="btn-green">Gửi đăng ký</button>
+  </div>
+
+  <!-- Cột phải -->
+  <div class="column">
+    <h3 class="highlight">Ứng dụng tìm việc hàng đầu Việt Nam</h3>
+    <ul>
+      <li>Tạo và quản lý CV</li>
+      <li>Kho việc làm phong phú</li>
+      <li>Giao diện hiện đại, tiện ích</li>
+    </ul>
+  </div>
+</div>
+
 </body>
 </html>
